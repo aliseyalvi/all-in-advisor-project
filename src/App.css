@@ -1,38 +1,371 @@
-.App {
+/* @font-face {
+  font-family: 'HelveticaNeue';
+  src: local('HelveticaNeue'), url(./assets/fonts/HelveticaNeueLTStd75Bold.otf) format('opentype');
+} */
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: local('HelveticaNeue'), url(./assets/fonts/HelveticaNeueLTStd-Lt.otf) format('opentype');
+}
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-weight: 200;
+  src: local('HelveticaNeue'), url(./assets/fonts/HelveticaNeueLTStd-Th.otf) format('opentype');
+}
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-weight: 500;
+  src: local('HelveticaNeue'), url(./assets/fonts/HelveticaNeueLTStd-Md.otf) format('opentype');
+}
+
+* {
+  font-family: Helvetica, sans-serif ;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
+.App-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 10px 20px -10px rgba(112,112,112,0.3); 
+  box-shadow: 0px 10px 20px -10px rgba(112,112,112,0.3);
+}
+
+.logo {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+}
+
+.hero-section {
+  background-image: url(./assets/imgs/BACKGROUND-DESIGN.png);
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.hero-section .hero-heading {
+  color: #1C75BC;
+  text-transform: uppercase;
+  font-family: HelveticaNeue;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.8em;
+}
+
+@media(max-width:576px){
+  .hero-section {
+    padding: 30px 10px;
+  }
+  .hero-section .hero-heading {
+    font-size: 1.2em;
+  }
+}
+
+.hero-section .hero-subtitle {
+  font-family: Helvetica, sans-serif;
+  color: #272727;
+  font-size: 0.9em;
+  text-align: justify;
+  letter-spacing: 1px ;
+  word-spacing: 1px;
+}
+
+.hero-section .discover-btn {
+  background-color: #1C75BC;
+  text-transform: uppercase;
+  width: 170px;
+  height: 40px;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 4px 13px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 13px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 13px -3px rgba(0,0,0,0.75);
+  margin: 50px 0;
+}
+
+.videoThumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.how-it-work-container-bg {
+  background-image: url(./assets/imgs/pawel-czerwinski-unsplash.jpg);
+  background-size: cover;
+  background-position: left;
+  border: 1px solid red;
+  
+}
+
+.how-it-work-container {
+  background-color: #1C75BCaa;
+  padding: 50px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.how-it-work-container .how-it-work-btn{
+  background-color: #E3E6EB;
+  color: #1C75BC;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.how-it-work-container .how-it-work-heading{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.4em;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media(max-width:576px){
+  .how-it-work-container .how-it-work-heading{
+    font-size: 1.1em;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.services-card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 20px -10px #707070; 
+  box-shadow: 0px 0px 20px -10px #707070;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+@media(max-width:576px){
+  .services-card {
+    width: 300px;
+  }
+}
+
+.services-card-title{
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #1C75BC;
+  
+}
+.services-card-img {
+  margin: 20px 0;
+}
+
+.services-card-details{
+  color: #1C75BC;
+  word-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+
+
+.take-a-sec-container .question-mark-img {
+ 
+}
+.take-a-sec-container .take-a-sec-heading{
+  color: #1C75BC;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.4em;
+  
+}
+
+.take-a-sec-container .span-1 {
+  color: #1C75BC;
+  font-size: 0.9em;
+}
+
+.take-a-sec-container .span-2 {
+  color: #272727;
+  font-size: 0.9em;
+
+}
+
+.card-wrapper{
+  box-shadow: none !important;
+  border: 1px solid #1C75BC !important;
+}
+.card-header {
+  background-color: #1C75BC !important;
+}
+.card-header .h4 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.3em;
+  font-family: HelveticaNeue !important;
+  letter-spacing: 1px;
+  
+}
+
+
+.form-body label {
+  color: #1C75BC !important;
+  font-size: 1em;
+}
+.form-body input {
+  border: 1px solid #B5DEFF !important;
+}
+.form-body input::placeholder {
+  color: #1C75BC !important;
+}
+
+.form-body .select-dropdown{
+  height: 50px;
+  border: 1px solid #B5DEFF !important;
+  color: #1C75BC !important;
+  -webkit-box-shadow: 0px 10px 20px -10px rgba(112,112,112,0.2) !important; 
+  box-shadow: 0px 10px 20px -10px rgba(112,112,112,0.2) !important;
+}
+.submit-btn {
+  background-color: #1C75BC;
+  text-transform: uppercase;
+  width: 150px;
+  height: 50px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+@media (max-width:576px){
+  .take-a-sec-container .take-a-sec-heading{
+    font-size: 1.1em;
+  }
+  .submit-btn {
+    font-size: 0.9em;
+  }
+  .form-body label {
+    font-size: 0.9em;
+  }
+}
+@media(max-width:991px){
+  .card-wrapper{
+    max-width: 500px;
+  }
+}
+
+.success-story-container {
+  background-image: url(./assets/imgs/3164.png);
+  background-size: cover;
+}
+
+
+.success-story-container .ceo-name-h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #1C75BC;
+  font-size: 1.2em;
+  font-family: HelveticaNeue;
+  letter-spacing: 1px;
+}
+.success-story-container .ceo-name-h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #1C75BC;
+  font-size: 0.9em;
+  font-family:  Helvetica, sans-serif;
+  
+}
+.success-para{
+  color: #1C75BC;
+  font-size: 0.9em;
+  font-weight: 400;
+  word-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  font-family:  Helvetica, sans-serif;
+}
+
+
+
+.ceo-container .ceo-name-h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #1C75BC;
+  font-size: 1.2em;
+  font-family: HelveticaNeue;
+  letter-spacing: 1px;
+}
+.ceo-container .ceo-name-h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #1C75BC;
+  font-size: 0.9em;
+  font-family:  Helvetica, sans-serif;
+}
+.ceo-container .social-icon{
+  width: 36px;
+  height: 36px;
+
+}
+
+.subscribe-container {
+  background-image: url(./assets/imgs/DOWNPART.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe-container  .subscribe-h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #1C75BC;
+  font-size: 1.2em;
+}
+.subscribe-container .input-container {
+  -webkit-box-shadow: 0px 0px 20px -10px #707070; 
+  box-shadow: 0px 0px 20px -10px #707070;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: white;
+}
+.subscribe-container .input-container input {
+  border: 0;
+  height: 100%;
+  padding: 0 10px;
+}
+.subscribe-container .input-container button {
+  border: 0;
+  height: 40px;
+  width: 90px ;
+  border-radius: 50px;
+  background-color: #1C75BC;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+@media(min-width:575.5px){
+  .subscribe-container .input-container input {
+    width: 300px;
+  }
+  .subscribe-container .input-container button {
+    width: 150px;
+  }
+}
+.footer-container{
+background-color: #1C75BC;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-container .copyright-para{
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 0;
 }
