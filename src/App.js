@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBIcon } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody } from "mdbreact";
 
 import './App.css';
 import logo from './assets/imgs/all-in-blue-LOGO.png'
 import videoThumbnail from './assets/imgs/video-thumbnail.png'
 import moneyBagIcon from './assets/icons/money-bag.svg'
+import stopWatchIcon from './assets/icons/stopwatch.svg'
+import sandClockIcon from './assets/icons/sand-clock.svg'
+import safetyIcon from './assets/icons/safety.svg'
 import galleryIcon from './assets/imgs/gallery.png'
 import CEOImg from './assets/imgs/Frank-J-Luciano.png'
 import fbIcon from './assets/icons/facebook.svg'
 import linkedInIcon from './assets/icons/linkedin.svg'
 import twitterIcon from './assets/icons/TWITTER.svg'
+import instaIcon from './assets/icons/INSTAGRAM.svg'
 import questionmarkImg from './assets/imgs/question-mark.png'
 
 export const App = () => {
@@ -28,18 +32,18 @@ export const App = () => {
 
     return (
       <MDBRow className='py-5 mx-0 my-3'>
-        <MDBCol className='p-0 pl-lg-5 ' lg={6}>
+        <MDBCol className='p-0 pl-lg-5 ' lg='6'>
           <div className='take-a-sec-container text-center text-lg-right'>
             <h1 className='take-a-sec-heading'>
-              Take a second to answer a few questionsto find out if you are currently overpaying.
+              Take a second to answer a few<br />questionsto find out if you are<br />currently overpaying.
               </h1>
             <p>
               <span className='span-1'>For taking the time we will also send you a free PDF-</span><br />
-              <span className='span-2'>“10 proven strategies to lower your Business Taxes”</span>
+              <span className='span-2'>“10 proven strategies to lower your<br />Business Taxes”</span>
             </p>
           </div>
         </MDBCol>
-        <MDBCol className='pr-lg-5 d-flex justify-content-center align-items-center p-0' lg={6}>
+        <MDBCol className='pr-lg-5 d-flex justify-content-center align-items-center p-0' lg='6'>
           <MDBCard className='card-wrapper my-3 my-lg-1'>
             <MDBCardBody className='p-0'>
               <form className='form-card'>
@@ -93,19 +97,19 @@ export const App = () => {
 
     return (
       <MDBRow className='py-5 mx-0 my-3'>
-        <MDBCol className='p-0 px-sm-3 px-md-4 pl-lg-5 d-flex align-items-center ' lg={6}>
+        <MDBCol className='p-0 px-sm-3 px-md-4 pl-lg-5 d-flex align-items-center ' lg='6'>
           <div className='take-a-sec-container text-center text-lg-right' >
             <img src={questionmarkImg} className='question-mark-img' />
             <h1 className='take-a-sec-heading'>
-              Take a second to answer a few questions to find out if you are currently overpaying.
-            </h1>
+              Take a second to answer a few<br />questionsto find out if you are<br />currently overpaying.
+              </h1>
             <p>
               <span className='span-1'>For taking the time we will also send you a free PDF-</span><br />
-              <span className='span-2'>“10 proven strategies to lower your Business Taxes”</span>
+              <span className='span-2'>“10 proven strategies to lower your<br />Business Taxes”</span>
             </p>
           </div>
         </MDBCol>
-        <MDBCol className='pr-lg-5 d-flex justify-content-center align-items-center p-0' lg={6}>
+        <MDBCol className='pr-lg-5 d-flex justify-content-center align-items-center p-0' lg='6'>
           <MDBCard className='card-wrapper my-3 my-lg-1'>
             <MDBCardBody className='p-0'>
               <form className='form-card'>
@@ -203,7 +207,7 @@ export const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header py-2">
+      <header className="App-header py-3">
         <img src={logo} className='logo' />
       </header>
 
@@ -216,7 +220,7 @@ export const App = () => {
                 You are Most Likely<br />Overpaying Your Taxes!
             </h1>
               <p className='hero-subtitle'>
-                If you think your cash is better off with the government than your small business, then this service is NOT for you.
+                If you think your cash is better off with the government than your small business, then this service is NOT for you.<br />
                 If you are sick and tired of your hard-earned income flying out the door, you ABSOLUTELY came to the right place.
 
             </p>
@@ -232,35 +236,91 @@ export const App = () => {
       <MDBContainer fluid >
         <MDBRow>
           <MDBCol className='p-0' >
-            <img src={videoThumbnail} className='videoThumbnail' />
+            {/* <img src={videoThumbnail} className='videoThumbnail' /> */}
+            <video width="100%" height="auto" controls loop poster={videoThumbnail} src='https://www.w3schools.com/html/mov_bbb.mp4' >
+
+            </video>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
 
       {/* How it works container */}
-      <MDBContainer fluid >
+      <MDBContainer fluid  className='px-0 mx-0'>
         {/* How it works row */}
-        <MDBRow>
-          <MDBCol className='p-0'>
+        <MDBRow className='px-0 mx-0 '>
+          <MDBCol className='p-0' size='12'>
             <div className='how-it-work-container-bg'>
-              <div className='how-it-work-container px-2 px-sm-4'>
+              <div className='how-it-work-container px-2 px-sm-2 px-md-4'>
                 <button className='how-it-work-btn'>
                   How it work
                 </button>
                 <h1 className='how-it-work-heading my-3'>
-                  How does Tax Planning with All-In Advisors benefit your Small Business
+                  How does Tax Planning with All-In Advisors<br />benefit your Small Business
                 </h1>
               </div>
             </div>
+            
 
           </MDBCol>
+          <MDBCol className='p-0' size='12' style={{marginTop:-50, }}>
+            <MDBRow className='m-0 p-0 px-lg-3'>
+              <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
+                <div className='services-card p-3 my-3' >
+                  <h1 className='services-card-title mt-3'>
+                    Creates Cash Flow
+                  </h1>
+                  <img src={moneyBagIcon} alt='Money Icon' className='services-card-img' />
+                  <p className='services-card-details'>
+                    Our service can instantly provide you with Cash Flow.  Cash flow is the life blood of any small business.
+                  </p>
+                </div>
+              </MDBCol>
+              <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
+                <div className='services-card p-3 my-3' >
+                  <h1 className='services-card-title mt-3'>
+                    Free Discovery Session
+              </h1>
+                  <img src={stopWatchIcon} alt='Stop Watch Icon' className='services-card-img' />
+                  <p className='services-card-details'>
+                    We provide a Free Discovery Session to estimate how much we think you can save.
+                    It will only cost 30 minutes of your time to potentially change the course of your business forever.
+
+              </p>
+                </div>
+              </MDBCol>
+              <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
+                <div className='services-card p-3 my-3' >
+                  <h1 className='services-card-title mt-3'>
+                    Pays for Itself
+              </h1>
+                  <img src={sandClockIcon} alt='Sand Clock Icon' className='services-card-img' />
+                  <p className='services-card-details'>
+                    The service more than PAYS FOR ITSELF! The tax plan savings will be multiples of your investment.
+                  </p>
+                </div>
+              </MDBCol>
+              <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
+                <div className='services-card p-3 my-3' >
+                  <h1 className='services-card-title mt-3'>
+                    money back Guarantee
+              </h1>
+                  <img src={safetyIcon} alt='Safety Icon' className='services-card-img' />
+                  <p className='services-card-details'>
+                    We offer a money back Satisfaction Guarantee We cannot guarantee your savings, but we guarantee that you will be satisfied with our work or your money back.
+
+                  </p>
+                </div>
+              </MDBCol>
+            </MDBRow>
+          </MDBCol>
+
         </MDBRow>
 
         {/* Services Cards Row */}
-        <MDBRow>
-          <MDBCol className='px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm={6} md={6} lg={3}>
+        {/* <MDBRow style={{border:'1px solid red'}}>
+          <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
             <div className='services-card p-3 my-3' >
-              <h1 className='services-card-title'>
+              <h1 className='services-card-title mt-3'>
                 Creates Cash Flow
                   </h1>
               <img src={moneyBagIcon} alt='Money Icon' className='services-card-img' />
@@ -269,41 +329,44 @@ export const App = () => {
                   </p>
             </div>
           </MDBCol>
-          <MDBCol className='px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm={6} md={6} lg={3}>
+          <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
             <div className='services-card p-3 my-3' >
-              <h1 className='services-card-title'>
-                Creates Cash Flow
-                  </h1>
-              <img src={moneyBagIcon} alt='Money Icon' className='services-card-img' />
+              <h1 className='services-card-title mt-3'>
+                Free Discovery Session
+              </h1>
+              <img src={stopWatchIcon} alt='Stop Watch Icon' className='services-card-img' />
               <p className='services-card-details'>
-                Our service can instantly provide you with Cash Flow.  Cash flow is the life blood of any small business.
+                We provide a Free Discovery Session to estimate how much we think you can save.
+                It will only cost 30 minutes of your time to potentially change the course of your business forever.
+
+              </p>
+            </div>
+          </MDBCol>
+          <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
+            <div className='services-card p-3 my-3' >
+              <h1 className='services-card-title mt-3'>
+                Pays for Itself
+              </h1>
+              <img src={sandClockIcon} alt='Sand Clock Icon' className='services-card-img' />
+              <p className='services-card-details'>
+                The service more than PAYS FOR ITSELF! The tax plan savings will be multiples of your investment.
                   </p>
             </div>
           </MDBCol>
-          <MDBCol className='px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm={6} md={6} lg={3}>
+          <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
             <div className='services-card p-3 my-3' >
-              <h1 className='services-card-title'>
-                Creates Cash Flow
-                  </h1>
-              <img src={moneyBagIcon} alt='Money Icon' className='services-card-img' />
+              <h1 className='services-card-title mt-3'>
+                money back Guarantee
+              </h1>
+              <img src={safetyIcon} alt='Safety Icon' className='services-card-img' />
               <p className='services-card-details'>
-                Our service can instantly provide you with Cash Flow.  Cash flow is the life blood of any small business.
-                  </p>
-            </div>
-          </MDBCol>
-          <MDBCol className='px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm={6} md={6} lg={3}>
-            <div className='services-card p-3 my-3' >
-              <h1 className='services-card-title'>
-                Creates Cash Flow
-                  </h1>
-              <img src={moneyBagIcon} alt='Money Icon' className='services-card-img' />
-              <p className='services-card-details'>
-                Our service can instantly provide you with Cash Flow.  Cash flow is the life blood of any small business.
+                We offer a money back Satisfaction Guarantee We cannot guarantee your savings, but we guarantee that you will be satisfied with our work or your money back.
+
                   </p>
             </div>
           </MDBCol>
 
-        </MDBRow>
+        </MDBRow> */}
 
         {/* Form Row Page 1 */}
         {
@@ -328,11 +391,11 @@ export const App = () => {
       {/* Success story container */}
       <MDBContainer fluid className='success-story-container py-3' >
         <MDBRow>
-          <MDBCol className='p-3' sm={4} md={4} lg={4}>
+          <MDBCol className='p-3 d-flex justify-content-center' sm='12' md='5' lg='4' xl='3'>
             <img src={galleryIcon} alt='gallery icon' className="img-fluid" />
           </MDBCol>
 
-          <MDBCol className='p-3' sm={8} md={8} lg={8}>
+          <MDBCol className='p-3' sm='12' md='7' lg='8' xl='9'>
             <div>
               <h2 className='ceo-name-h2'>
                 Mr. Dan S.
@@ -362,11 +425,11 @@ export const App = () => {
       {/* CEO Container */}
       <MDBContainer fluid className='ceo-container py-3' >
         <MDBRow>
-          <MDBCol className='p-3' sm={6} md={6} lg={6}>
-            <img src={CEOImg} alt='gallery icon' className="img-fluid" />
+          <MDBCol className='p-1 p-md-3 d-flex justify-content-center' sm='12' md='6' lg='6'>
+            <img src={CEOImg} alt='gallery icon' className="" style={{ width: '100%', maxWidth: '600px' }} />
           </MDBCol>
 
-          <MDBCol className='p-3 d-flex justify-content-center align-items-center' sm={6} md={6} lg={6} >
+          <MDBCol className='p-3 d-flex justify-content-center align-items-center' sm='12' md='6' lg='6' >
             <div>
               <div className=''>
                 <h1 className='ceo-name-h1'>
@@ -404,15 +467,29 @@ export const App = () => {
       {/* Subscribe email container */}
       <MDBContainer fluid className='subscribe-container'>
         <MDBRow>
-          <MDBCol className='d-flex flex-column justify-content-center align-items-center py-5'>
-            <h1 className='subscribe-h1'>
-              Subscribe to our Newsletter for Free Tips
+          <MDBCol className='d-flex flex-column justify-content-center align-items-center px-1 px-sm-3'>
+            <h1 className='subscribe-h1 m-0'>
+              Subscribe to our Newsletter<br />for Free Tips
               </h1>
-            <div className='input-container'>
-              <input type='text' placeholder='enter@mail.com' />
+            <div className='input-container my-5'>
+              <input className='pl-2 pl-sm-4 pr-2' type='text' placeholder='enter@mail.com' />
               <button>
                 Subscribe
-                </button>
+              </button>
+            </div>
+            <div>
+              <a href='#' className='mx-2' >
+                <img src={fbIcon} className='social-icon' />
+              </a>
+              <a href='#' className='mx-2'>
+                <img src={linkedInIcon} className='social-icon' />
+              </a>
+              <a href='#' className='mx-2' >
+                <img src={twitterIcon} className='social-icon' />
+              </a>
+              <a href='#' className='mx-2' >
+                <img src={instaIcon} className='social-icon' />
+              </a>
             </div>
           </MDBCol>
         </MDBRow>
