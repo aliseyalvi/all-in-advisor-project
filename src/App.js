@@ -18,21 +18,13 @@ import questionmarkImg from './assets/imgs/question-mark.png'
 
 export const App = () => {
 
-  const [loadFirstForm, setLoadFirstForm] = useState(true)
-  const [loadSecondForm, setLoadSecondForm] = useState(false)
-
-  //load second form onclick event 
-  const loadForms = () => {
-    setLoadFirstForm(false)
-    setLoadSecondForm(true)
-  }
 
   //render first page form here in jsx
   const renderFirstForm = () => {
 
     return (
       <MDBRow className='py-5 mx-0 my-3'>
-        <MDBCol className='p-0 pl-lg-5 ' lg='6'>
+        <MDBCol className='px-0 pl-lg-5 pr-lg-3 py-1' lg='6' >
           <div className='take-a-sec-container text-center text-lg-right'>
             <h1 className='take-a-sec-heading'>
               Take a second to answer a few<br />questionsto find out if you are<br />currently overpaying.
@@ -43,7 +35,7 @@ export const App = () => {
             </p>
           </div>
         </MDBCol>
-        <MDBCol className='pr-lg-5 d-flex justify-content-center align-items-center p-0' lg='6'>
+        <MDBCol className='px-2 pr-lg-5 d-flex justify-content-center align-items-center ' lg='6'>
           <MDBCard className='card-wrapper my-3 my-lg-1'>
             <MDBCardBody className='p-0'>
               <form className='form-card'>
@@ -78,47 +70,7 @@ export const App = () => {
                     className="form-control"
                     placeholder='enter@mail.com'
                   />
-                  {/* on button clic load second form */}
-                  <button className='submit-btn my-4' onClick={loadForms}>
-                    Submit Are you overpaying?
-                    </button>
-                </div>
-
-              </form>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    )
-  }
-
-  //render second page form here in jsx
-  const renderSecondForm = () => {
-
-    return (
-      <MDBRow className='py-5 mx-0 my-3'>
-        <MDBCol className='p-0 px-sm-3 px-md-4 pl-lg-5 d-flex align-items-center ' lg='6'>
-          <div className='take-a-sec-container text-center text-lg-right' >
-            <img src={questionmarkImg} className='question-mark-img' />
-            <h1 className='take-a-sec-heading'>
-              Take a second to answer a few<br />questionsto find out if you are<br />currently overpaying.
-              </h1>
-            <p>
-              <span className='span-1'>For taking the time we will also send you a free PDF-</span><br />
-              <span className='span-2'>“10 proven strategies to lower your<br />Business Taxes”</span>
-            </p>
-          </div>
-        </MDBCol>
-        <MDBCol className='pr-lg-5 d-flex justify-content-center align-items-center p-0' lg='6'>
-          <MDBCard className='card-wrapper my-3 my-lg-1'>
-            <MDBCardBody className='p-0'>
-              <form className='form-card'>
-                <div className='card-header'>
-                  <p className="h4 text-center py-4">
-                    are you currently overpaying?
-                    </p>
-                </div>
-                <div className='form-body p-4'>
+                  <br />
                   <label
                     htmlFor="defaultFormCardNameEx"
                     className="grey-text font-weight-light my-3"
@@ -189,9 +141,10 @@ export const App = () => {
                     <option value="3">Option 3</option>
                   </select>
                   <br />
+                  {/* on button clic load second form */}
                   <button className='submit-btn my-4'>
-                    SEND your openion
-                  </button>
+                    Submit Are you overpaying?
+                    </button>
                 </div>
 
               </form>
@@ -201,6 +154,7 @@ export const App = () => {
       </MDBRow>
     )
   }
+
 
 
 
@@ -245,7 +199,7 @@ export const App = () => {
       </MDBContainer>
 
       {/* How it works container */}
-      <MDBContainer fluid  className='px-0 mx-0'>
+      <MDBContainer fluid className='px-0 mx-0'>
         {/* How it works row */}
         <MDBRow className='px-0 mx-0 '>
           <MDBCol className='p-0' size='12'>
@@ -259,10 +213,10 @@ export const App = () => {
                 </h1>
               </div>
             </div>
-            
+
 
           </MDBCol>
-          <MDBCol className='p-0' size='12' style={{marginTop:-50, }}>
+          <MDBCol className='p-0' size='12' style={{ marginTop: -50, }}>
             <MDBRow className='m-0 p-0 px-lg-3'>
               <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
                 <div className='services-card p-3 my-3' >
@@ -292,7 +246,7 @@ export const App = () => {
                 <div className='services-card p-3 my-3' >
                   <h1 className='services-card-title mt-3'>
                     Pays for Itself
-              </h1>
+                  </h1>
                   <img src={sandClockIcon} alt='Sand Clock Icon' className='services-card-img' />
                   <p className='services-card-details'>
                     The service more than PAYS FOR ITSELF! The tax plan savings will be multiples of your investment.
@@ -316,75 +270,12 @@ export const App = () => {
 
         </MDBRow>
 
-        {/* Services Cards Row */}
-        {/* <MDBRow style={{border:'1px solid red'}}>
-          <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
-            <div className='services-card p-3 my-3' >
-              <h1 className='services-card-title mt-3'>
-                Creates Cash Flow
-                  </h1>
-              <img src={moneyBagIcon} alt='Money Icon' className='services-card-img' />
-              <p className='services-card-details'>
-                Our service can instantly provide you with Cash Flow.  Cash flow is the life blood of any small business.
-                  </p>
-            </div>
-          </MDBCol>
-          <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
-            <div className='services-card p-3 my-3' >
-              <h1 className='services-card-title mt-3'>
-                Free Discovery Session
-              </h1>
-              <img src={stopWatchIcon} alt='Stop Watch Icon' className='services-card-img' />
-              <p className='services-card-details'>
-                We provide a Free Discovery Session to estimate how much we think you can save.
-                It will only cost 30 minutes of your time to potentially change the course of your business forever.
 
-              </p>
-            </div>
-          </MDBCol>
-          <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
-            <div className='services-card p-3 my-3' >
-              <h1 className='services-card-title mt-3'>
-                Pays for Itself
-              </h1>
-              <img src={sandClockIcon} alt='Sand Clock Icon' className='services-card-img' />
-              <p className='services-card-details'>
-                The service more than PAYS FOR ITSELF! The tax plan savings will be multiples of your investment.
-                  </p>
-            </div>
-          </MDBCol>
-          <MDBCol className='py-3 px-lg-2 px-xl-3 d-flex align-items-center justify-content-center' sm='6' md='6' lg='3'>
-            <div className='services-card p-3 my-3' >
-              <h1 className='services-card-title mt-3'>
-                money back Guarantee
-              </h1>
-              <img src={safetyIcon} alt='Safety Icon' className='services-card-img' />
-              <p className='services-card-details'>
-                We offer a money back Satisfaction Guarantee We cannot guarantee your savings, but we guarantee that you will be satisfied with our work or your money back.
 
-                  </p>
-            </div>
-          </MDBCol>
-
-        </MDBRow> */}
-
-        {/* Form Row Page 1 */}
+      {/* Form Row Page 1 */}
         {
-          loadFirstForm ? (
-            renderFirstForm()
-          ) : (
-              null
-            )
+          renderFirstForm()
         }
-        {/* Form Row Page 2  */}
-        {
-          loadSecondForm ? (
-            renderSecondForm()
-          ) : (
-              null
-            )
-        }
-
 
       </MDBContainer>
 
