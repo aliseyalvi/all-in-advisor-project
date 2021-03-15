@@ -18,6 +18,10 @@ import questionmarkImg from './assets/imgs/question-mark.png'
 
 export const App = () => {
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(event);
+  }
 
   //render first page form here in jsx
   const renderFirstForm = () => {
@@ -142,9 +146,9 @@ export const App = () => {
                   </select>
                   <br />
                   {/* on button clic load second form */}
-                  <button className='submit-btn my-4'>
-                    Submit Are you overpaying?
-                    </button>
+                  <input type='submit' name='submit' value='Submit Are you overpaying?' className='submit-btn my-4' onClick={handleSubmit} />
+                    
+                    
                 </div>
 
               </form>
